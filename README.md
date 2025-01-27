@@ -20,3 +20,5 @@ the important part is to use 9600 baud, as TCP Server i use my home automation s
 `27.01.2025, 12:02:23 | RECEIVED [192.168.146.200:49153] | D4 32 0F 00 28 02 01 08 05 05 09 0C 14 02 05 05 03 04 0A 05 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F FF 7F 7F 7F 7F A9 `
 
 later i will create some testsettings like Temperature, used digitalport 1-3, eco/auto mode etc..
+
+https://github.com/lorbetzki/Daikin-EKHHE/discussions/
