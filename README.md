@@ -9,16 +9,53 @@ i openend the website of the RS485 Converter and use these setting to establish 
 
 ![wavesharewebui](pics/waveshare.png)
 
-the important part is to use 9600 baud, as TCP Server i use my home automation system named symcon. Now i receive some data...
+the important part is to use 9600 baud, as TCP Server i use my home automation system named symcon. 
 
-`27.01.2025, 12:02:23 | RECEIVED [192.168.146.200:49153] | CC 01 14 00 1E 3C 0A 00 07 11 1E FB 03 37 37 37 37 32 3E 3E 07 04 41 07 02 02 00 00 00 03 00 01 01 0A 28 0A 8C 3E 4B 1E 0F 09 19 58 04 FF 00 00 02 02 01 00 00 00 00 00 00 0C 01 20 2B F9 19 0C 5A 32 14 00 01 7F 9F`
+This unit sents data with Modbus Ascii, this have fixed length/values. This is good for us.
 
-`27.01.2025, 12:02:23 | RECEIVED [192.168.146.200:49153] | D2 01 14 00 1E 3C 0A 00 07 11 1E FB 03 37 37 37 37 32 3E 3E 07 04 41 07 02 02 00 00 00 03 00 01 01 0A 28 0A 8C 3E 4B 1E 0F 09 19 58 04 FF 00 00 02 02 01 00 00 00 00 00 0C 01 20 2B F9 19 0C 5A 32 00 01 7F 7F 7F 8F `
+some examples:
 
-`27.01.2025, 12:02:23 | RECEIVED [192.168.146.200:49153] | C1 32 0F 00 28 02 01 08 05 05 09 0C 14 02 05 05 03 04 0A 05 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F FF 7F 7F 7F 7F 96 `
+This string contains some values, we start counting our array by zero 
 
-`27.01.2025, 12:02:23 | RECEIVED [192.168.146.200:49153] | D4 32 0F 00 28 02 01 08 05 05 09 0C 14 02 05 05 03 04 0A 05 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F FF 7F 7F 7F 7F A9 `
+`DD 01 00 00 00 00 37 37 06 00 0F 05 0A 4E 00 00 00 01 1E 00 00 07 00 00 00 7F 05 CD 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 0E 62`
 
-later i will create some testsettings like Temperature, used digitalport 1-3, eco/auto mode etc..
+
+Name   | Parametertype (manual) | description
+-------- | ---------------------------|------------
+Array no: 0 | start always with Hex DD | is our starting block to get temperature information
+Array no: 6 | B 
+Array no: 7 | A 
+Array no: 8 | C 
+Array no: 10 | D 
+Array no: 11 | E 
+Array no: 12 | F
+Array no: 13 | G 
+Array no: 14 | H 
+Array no: 18 | I | lowercase i 
+Array no: 21 | Digital In 1-3 |  this contains the stati in reversed bit order*1 
+
+
+*1 off means, that the Digital Input is openend anf on means, its closed. 
+Digital Input 3 | Digital Input 2  |  Digital Input 1 | Array 21 result
+----------------| -----------------|------------------|----------------
+1 (off) |         1 (off) |        1 (off) |        7
+1 (off) |         1 (off) |        0 (on) |       6
+1 (off) |         0 (on) |       1 (off) |        5
+1 (off) |         0 (on) |       0 (on) |        4
+0 (on) |         1 (off) |       1 (off) |         3
+0 (on) |         1 (off) |        0 (on) |       2
+0 (on) |          0 (on) |      1 (off) |        1 
+0 (on) |         0 (on) |        0 (on) |       0 
+
+![image](https://github.com/user-attachments/assets/85f3a40f-3937-4740-8774-e49f22c1c5ea)
+
+The information for the target temperature can be found in this HEX Value started with D2
+
+' D2 01 14 00 1E 3C 0A 00 07 11 1E FB 03 37 37 37 37 32 3E 3E 07 04 41 07 02 02 00 00 00 03 00 01 01 0A 28 0A 8C 3E 4B 1E 0F 09 19 58 04 FF 00 00 02 02 01 00 00 00 00 00 0C 34 20 2B F9 19 0C 5A 32 00 01 7F 7F 7F C2 `
+
+Name   | Parametertype (manual) | description
+-------- | ---------------------------|------------
+Arrayno: 0 | start always with Hex D2 | is our starting block to get more information
+Arrayno: 13 | target temperature
 
 https://github.com/lorbetzki/Daikin-EKHHE/discussions/
