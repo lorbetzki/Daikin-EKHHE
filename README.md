@@ -56,6 +56,7 @@ The information for the target temperature can be found in this HEX Value starte
 Name   | Parametertype (manual) | description
 -------- | ---------------------------|------------
 Arrayno: 0 | start always with Hex D2 | is our starting block to get more information
+Arrayno: 1 | power | 0 = standby, 1 = on
 Arrayno: 3 | mode | 0 = auto, 1 = eco, 2 = boost, 3 = electric, 4 = fan, 5 = holiday 
 Arrayno: 13 | target temperature |  value in HEX, a value of 37 means 55 degress
 
