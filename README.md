@@ -56,6 +56,7 @@ The information for the target temperature can be found in this HEX Value starte
 Name   | Parametertype (manual) | description
 -------- | ---------------------------|------------
 Arrayno: 0 | start always with Hex D2 | is our starting block to get more information
-Arrayno: 13 | target temperature
+Arrayno: 3 | mode | 0 = auto, 1 = eco, 2 = boost, 3 = electric, 4 = fan, 5 = holiday 
+Arrayno: 13 | target temperature |
 
 https://github.com/lorbetzki/Daikin-EKHHE/discussions/
