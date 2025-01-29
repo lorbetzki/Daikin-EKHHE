@@ -23,14 +23,14 @@ This string contains some values, we start counting our array by zero
 Name   | Parametertype (manual) | description
 -------- | ---------------------------|------------
 Array no: 0 | start always with Hex DD | is our starting block to get temperature information
-Array no: 6 | B 
-Array no: 7 | A 
-Array no: 8 | C 
-Array no: 10 | D 
-Array no: 11 | E 
-Array no: 12 | F
-Array no: 13 | G 
-Array no: 14 | H 
+Array no: 6 | B | value in HEX, a value of 37 means 55 degress
+Array no: 7 | A | same as above
+Array no: 8 | C  | same as above
+Array no: 10 | D  | same as above
+Array no: 11 | E  | same as above
+Array no: 12 | F | same as above
+Array no: 13 | G  | same as above
+Array no: 14 | H  | same as above
 Array no: 18 | I | lowercase i 
 Array no: 21 | Digital In 1-3 |  this contains the stati in reversed bit order*1 
 
@@ -57,6 +57,6 @@ Name   | Parametertype (manual) | description
 -------- | ---------------------------|------------
 Arrayno: 0 | start always with Hex D2 | is our starting block to get more information
 Arrayno: 3 | mode | 0 = auto, 1 = eco, 2 = boost, 3 = electric, 4 = fan, 5 = holiday 
-Arrayno: 13 | target temperature |
+Arrayno: 13 | target temperature |  value in HEX, a value of 37 means 55 degress
 
 https://github.com/lorbetzki/Daikin-EKHHE/discussions/
