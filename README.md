@@ -3,11 +3,11 @@ try to receive some information from Daikin EKHHE
 
 to receive some data, i use an Wavesahre RS232/485 ETH Converter. I connect the converter to the CN23 in parallel of the Displaypanel from the Device
 
-![connection](pics/connect.jpg)
+![connection](pics/connect.jpg | height=400)
 
 i openend the website of the RS485 Converter and use these setting to establish a conncetion
 
-![wavesharewebui](pics/waveshare.png)
+![wavesharewebui](pics/waveshare.png | height=400)
 
 the important part is to use 9600 baud, as TCP Server i use my home automation system named symcon. 
 
