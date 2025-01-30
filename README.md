@@ -3,11 +3,9 @@ try to receive some information from Daikin EKHHE
 
 to receive some data, i use an Wavesahre RS232/485 ETH Converter. I connect the converter to the CN23 in parallel of the Displaypanel from the Device
 
-![connection](pics/connect.jpg | height=400)
-
 i openend the website of the RS485 Converter and use these setting to establish a conncetion
 
-![wavesharewebui](pics/waveshare.png | height=400)
+<img src="pics/connect.jpg" alt="connection" height="400px"> <img src="pics/waveshare.png" alt="waveshare webui" height="200px">
 
 the important part is to use 9600 baud, as TCP Server i use my home automation system named symcon. 
 
@@ -47,7 +45,7 @@ Digital Input 3 | Digital Input 2  |  Digital Input 1 | Array 21 result
 0 (on) |          0 (on) |      1 (off) |        1 
 0 (on) |         0 (on) |        0 (on) |       0 
 
-![image](https://github.com/user-attachments/assets/85f3a40f-3937-4740-8774-e49f22c1c5ea)
+<img src="https://github.com/user-attachments/assets/85f3a40f-3937-4740-8774-e49f22c1c5ea" alt="small teaser of received data" height="250px">
 
 The information for the target temperature can be found in this HEX Value started with D2
 
