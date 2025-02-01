@@ -58,7 +58,7 @@ Arrayno: 1 | power | 0 = standby, 1 = on
 Arrayno: 3 | mode | 0 = auto, 1 = eco, 2 = boost, 3 = electric, 4 = fan, 5 = holiday 
 Arrayno: 4 | (P4) Antilegionella duration
 Arrayno: 7 | (P2) Electrical heater switching-on delay"
-Arrayno: 13 | target temperature |  value in HEX, a value of 37 means 55 degress
+Arrayno: 14 | target temperature |  value in HEX, a value of 37 means 55 degress
 Arryno: 20 | (P1) Hysteresis on lower water probe for heat-pump working
 Arrayno: 22 | (P3) Antilegionella setpoint temperature
 Arrayno: 30 | (P24) Off-peak working mode
