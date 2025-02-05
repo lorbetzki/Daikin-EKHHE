@@ -58,11 +58,29 @@ Arrayno: 1 | power | 0 = standby, 1 = on
 Arrayno: 3 | mode | 0 = auto, 1 = eco, 2 = boost, 3 = electric, 4 = fan, 5 = holiday 
 Arrayno: 4 | (P4) Antilegionella duration
 Arrayno: 7 | (P2) Electrical heater switching-on delay"
-Arrayno: 14 | target temperature |  value in HEX, a value of 37 means 55 degress
-Arryno: 20 | (P1) Hysteresis on lower water probe for heat-pump working
+Arrayno: 13 | target temperature |  value in HEX, a value of 37 means 55 degress
+Arrayno: 20 | (P1) Hysteresis on lower water probe for heat-pump working
 Arrayno: 22 | (P3) Antilegionella setpoint temperature
 Arrayno: 30 | (P24) Off-peak working mode
 Arrayno: 31 | (P16) Solar mode integration
 Arrayno: 32 | (P23) Photovoltaic mode integration
+
+
+need verifying
+Name   | Parametertype (manual) | description
+-------- | ---------------------------|------------
+Arrayno: 34 | p18
+Arrayno: 35 | p19
+Arrayno: 36 | p20
+Arrayno: 38 | p22
+Arrayno: 43 | p36
+Arrayno: 59 | p47
+Arrayno: 60 | p48 (minus, need to calc! its -7 )
+Arrayno: 61 | p49
+Arrayno: 62 | p50
+Arrayno: 63 | p51
+Arrayno: 64 | p52
+
+its also possible to write to the device, i write later more information
 
 https://github.com/lorbetzki/Daikin-EKHHE/discussions/
