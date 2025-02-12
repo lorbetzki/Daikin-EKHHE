@@ -113,8 +113,8 @@ Arrayno: 53 | |
 Arrayno: 54 | | 
 Arrayno: 55 | | 
 Arrayno: 56 | | 
-Arrayno: 57 | HOUR | Systemtime hour
-Arrayno: 58 | MINUTE | Systemtime min
+Arrayno: 57 | MINUTE | Systemtime min
+Arrayno: 58 | HOUR | Systemtime hour
 Arrayno: 59 | | 
 Arrayno: 60 | (P47) | Maximum allowed inlet temperature for heat-pump working 
 Arrayno: 61 | (P48) | Minimum allowed inlet temperature for heat-pump working  
