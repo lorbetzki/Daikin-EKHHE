@@ -108,11 +108,11 @@ Arrayno: 48 | (P44) | EEV KP1 gain
 Arrayno: 49 | (P45) | EEV KP2 gain  
 Arrayno: 50 | (P46) | EEV KP3 gain  
 Arrayno: 51 | | 
-Arrayno: 52 | | 
-Arrayno: 53 | | 
-Arrayno: 54 | | 
-Arrayno: 55 | | 
-Arrayno: 56 | | 
+Arrayno: 52 | |  if schedule set value is 03 otherwise 00
+Arrayno: 53 | HOUR |  start scheduler 
+Arrayno: 54 | MINUTE |  start scheduler
+Arrayno: 55 | HOUR |  stop scheduler
+Arrayno: 56 | MINUTE |  stop scheduler
 Arrayno: 57 | MINUTE | Systemtime min
 Arrayno: 58 | HOUR | Systemtime hour
 Arrayno: 59 | | 
